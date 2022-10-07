@@ -17,6 +17,7 @@
       href="https://devchallenges.io/"
     />
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Devchallenges</title>
   </head>
@@ -41,7 +42,7 @@
     </header>
     <section class="hero">
       <div class="hero-container">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="3000">
           <div class="hero-content-heading">
             <h1>Modern interior</h1>
           </div>
@@ -51,7 +52,7 @@
             <a href="#" class="cta">Read More <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="hero-img">
+        <div class="hero-img" data-aos="fade-down" data-aos-duration="3000">
           <img src="images/photo1.png" alt="a comfy space">
           <div class="box">
             <div class="author-con">
@@ -73,21 +74,11 @@
     <footer class="footer">
       <p>created by username - devChallenges.io</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-document.querySelectorAll("nav-link a").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
-);
+      AOS.init();
     </script>
+    <script src="life.js"></script>
   </body>
 </html>
